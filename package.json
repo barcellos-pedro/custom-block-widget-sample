@@ -2,13 +2,21 @@
   "name": "custom-block-widget-sample",
   "version": "1.0.0",
   "description": "Sample Salesforce Marketing Cloud Content Builder Block using the blocksdk.",
-  "main": "blocksdk.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "keywords": [
+    "sdk",
+    "salesforce",
+    "content-builder"
+  ],
+  "author": "barcellos-pedro",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.3"
+  },
+  "engines": {
+    "node": "16.14.0"
   }
 }
