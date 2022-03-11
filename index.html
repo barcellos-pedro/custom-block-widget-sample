@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./blocksdk.js"></script>
+    <title>Block Widget Sample</title>
+</head>
+
+<body>
+    <h1>Custom block Widget Example</h1>
+
+    <div style="display: flex; flex-direction: column;">
+        <label for="content" style="margin-bottom: .5em;">Content</label>
+        <textarea id="content" name="content" placeholder="type here!" cols="30" rows="10"></textarea>
+    </div>
+
+    <h2>Result</h2>
+
+    <div id="result"></div>
+
+    <script>
+        let sdk = new window.sfdc.BlockSDK({
+            blockEditorWidth: 600,
+        });
+
+        const inputElement = document.querySelector('textarea');
+        const resultElement = document.querySelector('#result');
+
+        inputElement.addEventListener("input", (event) => {
+            let content = event.target.value;
+
+            resultElement.textContent = content;
+
+            sdk.setContent(content);
+            sdk.setSuperContent('<h1>This is super content</h1>' + content);
+
+            // Set any data you like as an object
+            sdk.setData({
+                content: content,
+                updatedAt: new Date()
+            });
+        });
+    </script>
+
+</body>
+
+</html>
