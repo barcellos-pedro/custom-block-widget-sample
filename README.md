@@ -17,3 +17,10 @@ Deploy through VS Code extension Live Server, clicking **Go Live**
 npm install
 npm start
 ```
+
+# Building Docker image
+Go to the directory that has Dockerfile and run the following command to build the Docker image.
+```
+docker build . -t <your username>/custom-block-widget-sample
+docker run -p <some port>:8080 -d <your username>/custom-block-widget-sample
+```
