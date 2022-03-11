@@ -2,7 +2,7 @@
 
 - Chose one method below to deploy this project to later use the localhost url into [blocktester](https://blocktester.herokuapp.com/) block widget URL field.
 
-- Or use any other url you would like
+- Or use any other [hosted app URL](https://custom-block-widget-sample.herokuapp.com/)
 
 ![blocktester url field to fill](https://i.imgur.com/OeCZx8c.png)
 
